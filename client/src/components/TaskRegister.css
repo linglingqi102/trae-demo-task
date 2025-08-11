@@ -1,0 +1,183 @@
+.task-register-container {
+  display: flex;
+  min-height: 100vh;
+  background: linear-gradient(135deg, #6366f1 0%, #4f46e5 100%);
+  font-family: 'Inter', system-ui, -apple-system, sans-serif;
+}
+
+.task-register-left-panel {
+  display: none;
+  width: 50%;
+  padding: 4rem;
+  color: white;
+  flex-direction: column;
+  justify-content: space-between;
+  background: linear-gradient(135deg, #4f46e5 0%, #3b82f6 100%);
+  animation: fadeInLeft 0.8s ease-out forwards;
+}
+
+.task-register-right-panel {
+  width: 100%;
+  max-width: 480px;
+  margin: auto;
+  padding: 2rem;
+  background-color: white;
+  border-radius: 12px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  animation: fadeInUp 0.8s ease-out forwards;
+}
+
+.task-register-logo {
+  display: flex;
+  align-items: center;
+  margin-bottom: 2rem;
+  justify-content: center;
+}
+
+.task-register-logo-icon {
+  width: 40px;
+  height: 40px;
+  margin-right: 10px;
+  background: linear-gradient(135deg, #6366f1 0%, #4f46e5 100%);
+  border-radius: 8px;
+}
+
+.task-register-logo span {
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: #4f46e5;
+}
+
+.task-register-title {
+  text-align: center;
+  margin-bottom: 0.5rem;
+  font-size: 2rem;
+  font-weight: 700;
+  color: #1e293b;
+}
+
+.task-register-subtitle {
+  text-align: center;
+  margin-bottom: 2rem;
+  color: #64748b;
+  font-size: 1rem;
+}
+
+.task-register-form-item {
+  margin-bottom: 1.5rem;
+}
+
+.task-register-form-input-container {
+  position: relative;
+  margin-top: 8px;
+}
+
+.task-register-form-input {
+  width: 100%;
+  padding: 12px 16px;
+  border: 1px solid #e2e8f0;
+  border-radius: 8px;
+  font-size: 1rem;
+  transition: all 0.3s ease;
+  background-color: #f8fafc;
+}
+
+.task-register-form-input:focus {
+  border-color: #6366f1;
+  box-shadow: 0 0 0 3px rgba(99, 102, 241, 0.1);
+  outline: none;
+  background-color: white;
+}
+
+.task-register-form-button {
+  width: 100%;
+  padding: 12px;
+  font-size: 1rem;
+  font-weight: 600;
+  background: linear-gradient(135deg, #6366f1 0%, #4f46e5 100%);
+  border: none;
+  border-radius: 8px;
+  color: white;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.task-register-form-button:hover {
+  background: linear-gradient(135deg, #4f46e5 0%, #3b82f6 100%);
+  transform: translateY(-2px);
+}
+
+.task-register-form-button:active {
+  transform: translateY(0);
+}
+
+.task-register-form-button::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 300px;
+  height: 300px;
+  background: rgba(255, 255, 255, 0.15);
+  border-radius: 50%;
+  transform: translate(-50%, -50%) scale(0);
+  transition: transform 0.6s ease;
+}
+
+.task-register-form-button:hover::after {
+  transform: translate(-50%, -50%) scale(1);
+}
+
+.task-register-footer {
+  margin-top: 2rem;
+  text-align: center;
+  color: #64748b;
+  font-size: 0.875rem;
+}
+
+.task-register-footer a {
+  color: #4f46e5;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.task-register-footer a:hover {
+  color: #3b82f6;
+  text-decoration: underline;
+}
+
+/* 响应式设计 */
+@media (min-width: 768px) {
+  .task-register-left-panel {
+    display: flex;
+  }
+  .task-register-right-panel {
+    width: 50%;
+    margin: 2rem;
+  }
+}
+
+/* 动画 */
+@keyframes fadeInLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
