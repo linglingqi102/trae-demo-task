@@ -1,0 +1,14 @@
+.env
+node_modules/
+client/node_modules/
+build/
+dist/
+*.log
+*.sqlite
+.DS_Store
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+package-lock.json
+yarn.lock
